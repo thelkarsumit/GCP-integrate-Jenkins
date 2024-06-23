@@ -1,5 +1,8 @@
 pipeline {
   agent any
+    environment {
+    CLOUDSDK_CORE_PROJECT='peak-axiom-426310-b1'
+  }
   stages {
     stage('test') {
       steps {
