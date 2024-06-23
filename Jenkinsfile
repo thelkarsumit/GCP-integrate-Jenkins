@@ -6,7 +6,7 @@ pipeline {
         withCredentials([file(credentialsId: 'GCP-service-key', variable: 'GCLOUD_CREDS')]) {
           sh '''
             gcloud version
-            gcloud auth activate-service-account --key-file="$GCLOUD_CREDS"
+            gcloud auth activate-service-account --key-file="$GCP-service-key"
             gcloud compute zones list
           '''
         }
